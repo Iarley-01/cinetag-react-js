@@ -1,0 +1,11 @@
+.rodape {
+  background-color: var(--preto);
+  text-align: center;
+  color: var(--branco);
+  padding: 1em;
+}
+
+.rodapeLink {
+  color: var(--branco);
+  text-decoration: none;
+}
