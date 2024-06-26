@@ -1,8 +1,15 @@
 .rodape {
+  display: flex;
+  justify-content: center;
   background-color: var(--preto);
   text-align: center;
   color: var(--branco);
   padding: 1em;
+}
+
+.rodape {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .rodapeLink {
