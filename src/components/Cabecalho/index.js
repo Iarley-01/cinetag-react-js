@@ -8,17 +8,19 @@ import CabecalhoLink from "components/CabecalhoLink";
 function Cabecalho() {
   return (
     <header className={styles.cabecalho}>
-      <Link to="./">
-        <img src={logo} alt="Logo CineTag" />
-      </Link>
-      <nav>
-        <CabecalhoLink url="./">
-          Home
-        </CabecalhoLink>
-        <CabecalhoLink url="./Favoritos">
-          Favoritos
-        </CabecalhoLink>
-      </nav>
+      <section>
+        <Link to="./">
+          <img src={logo} alt="Logo CineTag" />
+        </Link>
+        <nav>
+          <CabecalhoLink url="./">
+            Home
+          </CabecalhoLink>
+          <CabecalhoLink url="./Favoritos">
+            Favoritos
+          </CabecalhoLink>
+        </nav>
+        </section>
     </header>
   );
 }
