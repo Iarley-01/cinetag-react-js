@@ -11,6 +11,13 @@
 .capa {
   width: 100%;
 }
+
+.link {
+    text-decoration: none;
+    color: var(--preto);
+    text-align: left;
+}
+
 .container h2, .favoritar {
   padding: 0 1em;
 }
