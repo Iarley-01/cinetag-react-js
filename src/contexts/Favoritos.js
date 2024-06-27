@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { createContext, useState } from "react";
 
-export const FavoritosContext = useContext();
+export const FavoritosContext = createContext();
 
 export default function FavoritosProvider({children}) {
   const [favorito, setFavorito] = useState([]);
