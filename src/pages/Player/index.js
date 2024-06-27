@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 
 import styles from "./Player.module.css";
 
+import NaoEncontrada from "pages/NaoEncontrada";
+
 import Banner from "components/Banner";
 import Titulo from "components/Titulo";
 
@@ -12,6 +14,10 @@ function Player() {
   const video = videos.find((video) => {
     return video.id === Number(parametros.id)
   });
+  
+  if (!video) {
+    return <NaoEncontrada />;
+  }
   return (
     <>
       <Banner imagem="player" />
