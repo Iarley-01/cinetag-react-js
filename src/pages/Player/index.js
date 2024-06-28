@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import styles from "./Player.module.css";
 
@@ -7,14 +8,19 @@ import NaoEncontrada from "pages/NaoEncontrada";
 import Banner from "components/Banner";
 import Titulo from "components/Titulo";
 
-import videos from "json/db.json";
-
 function Player() {
-  const parametros = useParams();
-  const video = videos.find((video) => {
-    return video.id === Number(parametros.id)
-  });
+  const [video, setVideo] = useState();
   
+  useEffect(() => {
+    fetch(`https://my-json-server.typicode.com/Iarley-01/api-cinetag/videos?id=${parametros.id}`)
+      .then(resposta => resposta.json())
+      .then(dados => {
+        setVideo(...dados)
+      });
+  }, []);
+  
+  const parametros = useParams();
+
   if (!video) {
     return <NaoEncontrada />;
   }
